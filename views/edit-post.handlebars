@@ -1,13 +1,17 @@
 <form class="col-10 p-4 m-auto">
-        <input type="hidden" id="edit-post-id" value="{{post.id}}"/>
-        <h4 class="form group col-5 m-auto">EDIT POST</h4>
+        <input type="hidden" id="edit-entry-id" value="{{entry.id}}"/>
+        <h4 class="form group col-5 m-auto">EDIT ENTRY</h4>
         <div class="form-group">
-            <label for="postName">Title:</label>
-            <textarea class="form-control" id="edited-name" rows="1">{{post.title}}</textarea>
+            <label for="entryTitle">Title:</label>
+            <textarea class="form-control" id="edited-title" rows="1">{{entry.title}}</textarea>
         </div>
         <div class="form-group">
-            <label for="petType">Content:</label>
-            <textarea class="form-control" id="edited-type" rows="1">{{post.body}}</textarea>
+            <label for="entryEpisodes">Content:</label>
+            <textarea class="form-control" id="edited-episodes" rows="1">{{entry.episodes_seen}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="entryRating">Content:</label>
+            <textarea class="form-control" id="edited-rating" rows="1">{{entry.rating}}</textarea>
         </div>
         <div class="d-flex justify-content-center">
             <button id="edit-post-button" class="btn btn-dark col-4">Update Post</button>
