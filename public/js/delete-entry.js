@@ -1,13 +1,13 @@
 const delButtonHandler = async (event) => {
     event.preventDefault();
-    const post_id = document.querySelector('#edit-post-id').value;
+    const entry_id = document.querySelector('#edit-entry-id').value;
 
-    const response = await fetch(`/api/post/${post_id}`, {
+    const response = await fetch(`/api/post/${entry_id}`, {
         method: 'DELETE',
     });
 
         if (response.ok) {
-            window.alert('Post Deleted!');
+            window.alert('Entry Deleted!');
             document.location.replace('/dashboard');
         } else {
             alert('Failed to delete post');
