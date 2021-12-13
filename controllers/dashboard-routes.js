@@ -30,7 +30,7 @@ router.get('/', withAuth, async (req, res) => {
 
 // NEW Anime
 router.get('/new', withAuth, (req, res) => {
-    res.render('newentry', { // new-anime handlebar
+    res.render('new-entry', { // new-anime handlebar
       layout: 'dashboard',
       logged_in: req.session.logged_in,
     });
@@ -44,7 +44,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
     const entry = entryData.get({ plain: true });
     
-    res.render('edit-entry', {
+    res.render('update-entry', {
         layout: 'dashboard',
         entry,
         logged_in: req.session.logged_in,
