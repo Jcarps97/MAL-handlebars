@@ -26,6 +26,11 @@ Entry.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+
+    progress: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     
     user_id: {
         type: DataTypes.INTEGER,

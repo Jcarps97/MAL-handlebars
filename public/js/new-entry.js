@@ -2,6 +2,7 @@ const newPostFormHandler = async (event) => {
     event.preventDefault();
 
     const title = document.querySelector('#title').value.trim();
+    const progress = document.querySelector('#progress').value.trim();
     const episodes_seen = document.querySelector('#episodes').value.trim();
     const rating = document.querySelector('#rating').value.trim();
 
@@ -9,6 +10,7 @@ const newPostFormHandler = async (event) => {
         method: `POST`,
         body: JSON.stringify({
             title,
+            progress,
             episodes_seen,
             rating,
         }),

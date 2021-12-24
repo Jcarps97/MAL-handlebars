@@ -32,6 +32,7 @@ router.post('/', withAuth, async (req, res) => {
       try {
           const newEntry = await Entry.create({
               title: req.body.title,
+              progress: req.body.progress,
               episodes_seen: req.body.episodes_seen,
               rating: req.body.rating,
               user_id: req.session.user_id, 
